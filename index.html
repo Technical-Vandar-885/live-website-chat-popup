@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Chat Window</title>
+</head>
+<body>
+    <div class="chat">
+        <img src="chat.png" title="Chat With Us" onclick="OpenChat();" alt="">
+    </div>
+    <div class="container">
+        <div class="close">
+            <img src="close.png" onclick="OpenChat();" alt="">
+        </div>
+        <h1>Chat With Us</h1>
+        <form action="">
+            <div class="inp">
+                <div class="email">
+                    <label for="email">Email: </label><br>
+                    <input type="email" name="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="message">
+                    <label for="message">Your Message: </label><br>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write Your Message..." required></textarea>
+                </div>
+                <div class="button">
+                    <button>Send</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function OpenChat()
+    {
+        let popup=document.querySelector('.container');
+        popup.classList.toggle('active');
+    }
+</script>
+</html>
